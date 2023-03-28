@@ -1,0 +1,149 @@
+/* Tablet & Mobile */
+
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --header_navbar-height: 0px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    }
+
+    .header_soft-bar {
+        display: flex;
+    }
+
+    .category_mobile {
+        display: flex;
+    }
+    
+    .app_container {
+        margin-top: calc(var(--header-height) + var(--header_soft-bar-height));
+    }
+    .cart_list-items {
+        max-height: 56vh;
+        overflow-y: auto;
+    }
+    .header_card {
+        width: 80px;
+        text-align: right;
+    }
+
+    .header_cart-list {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: 100%;
+    padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header_cart-list::before {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    
+    .header_seach {
+        justify-content: space-around;
+    }
+
+    .header_seach-mobile-list-icon {
+        font-size: 2.6rem;
+        color: var(--white-color);
+    }
+
+    .header_logo {
+        width: unset;
+    }
+
+    .header_link-shoppe {
+        display: block;
+        line-height: 0;
+    }
+
+    .header_seach-main {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: var(--header-height);
+        z-index: 1;
+        width: 100%;
+        animation: Faceinmobile linear 0.3s ;
+    }
+
+    .header_seach-history {
+        /* display: block; */
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: (var(--header-seach));
+        box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+    }
+
+    .header_seach-mobile-list {
+        display: block;
+    }
+    
+    .header_seach-mobile {
+        display: block;
+    }
+
+    .app_content {
+        margin: 0 4px;
+    }
+    
+    .product_pagination {
+        padding-left: 0;
+    }
+
+    .product_pagination-items {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .app_content {
+        padding-top: 8px;
+    }
+
+    .header_logo-img {
+        width: 110px;
+    }
+
+    .footer_content {
+        padding: 0 16px;
+    }
+
+    @keyframes Faceinmobile {
+        from {
+            opacity: 0;
+            top: calc(var( --header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: calc(var( --header-height));
+        }
+    }
+}

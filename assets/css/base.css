@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(253, 96, 50);
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;    
+    --header-height: 120px;
+    --header_navbar-height: 34px;
+    --header_soft-bar-height: 46px;
+    --star-gold-color: #FFCE3E;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Reponsive */
+
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* test */
+
+.grid_columns-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid_columns-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid_columns-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334% ;
+}
+
+/* Animation */
+@keyframes FaceIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: FaceIn ease 0.2s;
+    /* display: flex; */
+    margin: auto;
+}
+
+.modal_overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modal_container {
+    --growth-from: 0.7;
+    --growth-to: 1;
+    margin: auto;
+    background-color: var(--white-color);
+    /* position: absolute; */
+    z-index: 1;
+    animation: growth linear 0.1s ;
+}
+
+.modal_container {
+    min-width: 550px;
+}
+/* Register */
+.modal_form {
+  
+}
+
+.modal_heading {
+    height: 32.6667px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 30px;
+}
+
+
+.modal_title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.modal_title-red {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.modal_body {
+    padding: 0 30px;
+    margin-top: 16px;
+}
+
+.form_info-user {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 12px;
+    padding: 10px;
+    font-size: 1.4rem;
+}
+
+.modal_confirm {
+    padding: 0 16px;
+}
+
+.modal_info {
+    margin-bottom: 8px;
+}
+
+.modal_text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+a.modal_text-policy,
+.modal_text-rules {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.modal_btn {
+    text-align: right;
+    padding: 0 30px;
+    font-size: 1.6rem;
+    margin-top: 100px;
+}
+
+/* Button */
+
+.btn {
+    max-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+    min-width: 90px;
+    background-color: var(--white-color);
+}
+
+.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.modal_btn-next:hover{
+    background-color: rgb(253, 96, 50, 0.5);
+}
+
+.modal_btn-next {
+    background-color: var(--primary-color);
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+.modal_socials {
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+    font-size: 1.6rem;
+    font-weight: 500;   
+    margin-top: 26px;
+}
+.modal_link-icon {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.modal_link-icon:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.modal_icon-gg,
+.modal_icon-fb {
+    width: 6.5rem;
+    font-size: 3.2rem;
+}
+
+.link_icon-fb {
+    background-color: #283f6f;
+    color: var(--white-color);
+}
+
+.modal_link-text {
+    margin-right: 2.6rem;
+}
+
+.link_icon-gg {
+    background-color: var(--white-color);
+    color: var(--text-color);
+}
+/* Login */
+
+.modal_help {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+}
+
+.modal_help-fogot {
+    text-decoration: none;
+}
+
+.modal_help-separate {
+    display: block;
+    width: 10px;
+    height: 16px;
+    margin-right: 6px;
+    border-right: 1px solid #bebebe;
+}
+
+.modal_help-password {
+    color: var(--primary-color);
+}
+
+.modal_help-wonder {
+    color: #6a6a69;
+}
+
+/* End Modal */
